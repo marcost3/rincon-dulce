@@ -112,7 +112,26 @@ img {
   justify-content: space-between;
 }
 
-.brand,
+.brand {
+  display: flex;
+
+  align-items: center;
+
+  height: 50px;
+}
+
+.brand-logo {
+  display: block;
+
+  width: auto;
+
+  height: 125px;
+
+  max-width: 180px;
+
+  object-fit: contain;
+}
+
 .footer-brand {
   font-family:
     "Playfair Display",
@@ -124,13 +143,6 @@ img {
 
   letter-spacing: -0.03em;
 }
-
-.brand span {
-  font-weight: 500;
-
-  font-style: italic;
-}
-
 .desktop-nav {
   display: flex;
 
@@ -1237,6 +1249,13 @@ h2 {
 }
 
 @media (max-width: 760px) {
+
+
+  .brand-logo {
+    height: 40px;
+    max-width: 155px;
+  }
+
 
   .container {
     width:

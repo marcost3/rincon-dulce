@@ -43,8 +43,13 @@ function Navbar() {
           href="#inicio"
           className="brand"
           onClick={closeMenu}
+          aria-label="Rincón Dulce - Inicio"
         >
-          Rincón<span>Dulce</span>
+          <img
+            src="/images/logo.png"
+            alt="Rincón Dulce"
+            className="brand-logo"
+          />
         </a>
 
         <nav className="desktop-nav">
@@ -64,7 +69,12 @@ function Navbar() {
           onClick={() =>
             setMenuOpen(!menuOpen)
           }
-          aria-label="Abrir menú"
+          aria-label={
+            menuOpen
+              ? "Cerrar menú"
+              : "Abrir menú"
+          }
+          aria-expanded={menuOpen}
         >
           {menuOpen ? (
             <X size={24} />
