@@ -1,3 +1,8 @@
+import panImg from '../assets/images/pan.jpg';
+import pastaImg from '../assets/images/pasta.jpg';
+import pasta2Img from '../assets/images/pasta2.jpg';
+import salsaImg from '../assets/images/salsa.jpg';
+
 export const products = [
   {
     id: 1,
@@ -5,7 +10,7 @@ export const products = [
     title: "Panadería",
     description:
       "Productos elaborados artesanalmente para acompañar todos los momentos del día.",
-    image: "/public/images/pan.jpg"
+    image: panImg
   },
 
   {
@@ -14,7 +19,7 @@ export const products = [
     title: "Pastas frescas",
     description:
       "Producción diaria de pastas frescas artesanales para disfrutar en casa.",
-    image: "/public/images/pasta.jpg"
+    image: pastaImg
   },
 
   {
@@ -23,7 +28,7 @@ export const products = [
     title: "Pastas rellenas",
     description:
       "Variedad de pastas rellenas elaboradas artesanalmente.",
-    image: "/public/images/pasta2.jpg"
+    image: pasta2Img
   },
 
   {
@@ -32,6 +37,6 @@ export const products = [
     title: "Salsas, queso y crema",
     description:
       "Complementos para acompañar y completar tu comida.",
-    image: "/public/images/salsa.jpg"
+    image: salsaImg
   }
 ];

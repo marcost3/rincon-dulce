@@ -169,10 +169,10 @@ export const branches = [
 
   {
     id: 9,
-    name: "12 de Octubre",
-    address: "12 de Octubre 3765, Mar del Plata.",
+    name: "Av. Champagnat y Moreno",
+    address: "Av. Champagnat y Moreno, Mar del Plata.",
     neighborhood: "Mar del Plata",
-    phone: "223-654-4146",
+    phone: "223-111-1111",
     whatsapp: "11-1111-1111",
 
     mapsUrl: "https://maps.app.goo.gl/5wszubFgvjgfgEbA8",
