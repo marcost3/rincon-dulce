@@ -1,7 +1,7 @@
 import panImg from '../assets/images/pan.jpg';
 import pastaImg from '../assets/images/pasta.jpg';
 import pasta2Img from '../assets/images/pasta2.jpg';
-import salsaImg from '../assets/images/salsa.jpg';
+import masitas from '../assets/images/masitas.jpg';
 
 export const products = [
   {
@@ -33,10 +33,10 @@ export const products = [
 
   {
     id: 4,
-    category: "COMPLEMENTOS",
-    title: "Salsas, queso y crema",
+    category: "CONFITERIA",
+    title: "Masas secas",
     description:
-      "Complementos para acompañar y completar tu comida.",
-    image: salsaImg
+      "Exquisita variedad artesanal, elaboradas con ingredientes seleccionados para endulzar tus momentos especiales.",
+    image: masitas
   }
 ];

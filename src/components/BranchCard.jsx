@@ -23,16 +23,16 @@ function BranchCard({ branch, distance }) {
         </div>
 
         <div className="branch-info">
-          <span className="branch-label">
-            RINCÓN DULCE
-          </span>
+            <span className="branch-label">
+                {branch.schedule || "Horario no disponible"}
+            </span>
 
-          <h3>{branch.name}</h3>
+            <h3>{branch.name}</h3>
 
-          <p>
-            <MapPin size={16} />
-            {branch.address}
-          </p>
+            <p>
+                <MapPin size={16} />
+                {branch.address}
+            </p>
         </div>
 
         <div className="branch-right">

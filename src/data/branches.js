@@ -3,6 +3,7 @@ export const branches = [
     id: 1,
     name: "Alberti y Corrientes",
     address: "Alberti y Corrientes, Mar del Plata.",
+    schedule:"Lun a Sab 07:00 a 21:00 - Dom 07:00 a 20:30",
     neighborhood: "Mar del Plata",
     phone: "223-496-1869",
     whatsapp: "11-1111-1111",
@@ -15,15 +16,17 @@ export const branches = [
     },
 
     products: [
-      "Pan",
-      "Facturas"
+      "Panaderia",
+      "Confiteria",
+      "Pasta"
     ]
   },
 
   {
     id: 2,
-    name: "Blas Parera",
+    name: "Constitucion y Blas Parera",
     address: "Blas Parera 1021, Mar del Plata.",
+    schedule:"Lun a Dom 07:30 a 20:30",
     neighborhood: "Mar del Plata",
     phone: "223-479-4074",
     whatsapp: "11-1111-1111",
@@ -36,15 +39,18 @@ export const branches = [
     },
 
     products: [
-      "PRODUCTO A COMPLETAR",
-      "PRODUCTO A COMPLETAR"
+      "Panaderia",
+      "Confiteria",
+      "Pasta",
+      "Despensa"
     ]
   },
 
   {
     id: 3,
-    name: "Av. Constitucion",
+    name: "Av. Constitucion y Carballo",
     address: "Av. Constitucion 6601, Mar del Plata.",
+    schedule:"Lun a Dom 07:30 a 21:00",
     neighborhood: "Mar del Plata",
     phone: "223-492-2746",
     whatsapp: "11-1111-1111",
@@ -57,15 +63,17 @@ export const branches = [
     },
 
     products: [
-      "PRODUCTO A COMPLETAR",
-      "PRODUCTO A COMPLETAR"
+      "Panaderia",
+      "Confiteria",
+      "Pasta"
     ]
   },
 
   {
     id: 4,
-    name: "Av. Colón",
+    name: "Av. Colón y España",
     address: "Av. Colon 3502, Mar del Plata.",
+    schedule:"Lun a Sab 06:00 a 20:30 - Dom 06:00 a 20:00",
     neighborhood: "Mar del Plata",
     phone: "223-492-2746",
     whatsapp: "11-1111-1111",
@@ -78,15 +86,16 @@ export const branches = [
     },
 
     products: [
-      "PRODUCTO A COMPLETAR",
-      "PRODUCTO A COMPLETAR"
+      "Panaderia",
+      "Confiteria"
     ]
   },
 
   {
     id: 5,
-    name: "La rioja",
+    name: "La rioja y Alvarado",
     address: "La rioja 2992, Mar del Plata.",
+    schedule:"Lun a Sab 07:30 a 20:30 - Dom 07:30 a 20:00",
     neighborhood: "Mar del Plata",
     phone: "223-493-9333",
     whatsapp: "11-1111-1111",
@@ -99,15 +108,16 @@ export const branches = [
     },
 
     products: [
-      "PRODUCTO A COMPLETAR",
-      "PRODUCTO A COMPLETAR"
+      "Panaderia",
+      "Confiteria"
     ]
   },
 
   {
     id: 6,
-    name: "Av. Juan Jara",
+    name: "Av. Juan Jara y Rivadavia",
     address: "Av. Juan H. Jara 1798, Mar del Plata.",
+    schedule:"Lun a Sab 07:30 a 21:00 - Dom 07:30 a 20:30",
     neighborhood: "Mar del Plata",
     phone: "223-475-3733",
     whatsapp: "11-1111-1111",
@@ -120,15 +130,16 @@ export const branches = [
     },
 
     products: [
-      "PRODUCTO A COMPLETAR",
-      "PRODUCTO A COMPLETAR"
+      "Panaderia",
+      "Confiteria"
     ]
   },
 
   {
     id: 7,
-    name: "San Juan",
+    name: "Av. Colon y San Juan",
     address: "San Juan 2191, Mar del Plata.",
+    schedule:"Lun a Sab 07:00 a 21:00 - Dom 07:00 a 20:30",
     neighborhood: "Mar del Plata",
     phone: "223-111-1111",
     whatsapp: "11-1111-1111",
@@ -141,15 +152,18 @@ export const branches = [
     },
 
     products: [
-      "PRODUCTO A COMPLETAR",
-      "PRODUCTO A COMPLETAR"
+      "Panaderia",
+      "Confiteria",
+      "Pasta",
+      "Despensa"
     ]
   },
 
   {
     id: 8,
-    name: "Av. Pedro Luro",
+    name: "Av. Pedro Luro y Chilavert",
     address: "Av. Pedro Luro 8107, Mar del Plata.",
+    schedule:"Lun a Dom 07:30 a 20:30",
     neighborhood: "Mar del Plata",
     phone: "223-470-1791",
     whatsapp: "11-1111-1111",
@@ -162,8 +176,8 @@ export const branches = [
     },
 
     products: [
-      "PRODUCTO A COMPLETAR",
-      "PRODUCTO A COMPLETAR"
+      "Panaderia",
+      "Confiteria"
     ]
   },
 
@@ -171,6 +185,7 @@ export const branches = [
     id: 9,
     name: "Av. Champagnat y Moreno",
     address: "Av. Champagnat y Moreno, Mar del Plata.",
+    schedule:"Lun a Vie 07:30 a 17:00 - Sab y Dom 08:00 a 16:00",
     neighborhood: "Mar del Plata",
     phone: "223-111-1111",
     whatsapp: "11-1111-1111",
@@ -183,8 +198,8 @@ export const branches = [
     },
 
     products: [
-      "PRODUCTO A COMPLETAR",
-      "PRODUCTO A COMPLETAR"
+      "Panaderia",
+      "Confiteria"
     ]
   }
 ];
