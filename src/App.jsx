@@ -5,7 +5,7 @@ import Products from "./components/Products";
 import Branches from "./components/Branches";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-import WhatsAppButton from "./components/WhatsAppButton";
+import InstagramButton from "./components/InstagramButton";
 
 function App() {
   return (
@@ -22,7 +22,7 @@ function App() {
 
       <Footer />
 
-      <WhatsAppButton />
+      <InstagramButton />
     </>
   );
 }

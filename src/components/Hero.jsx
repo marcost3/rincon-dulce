@@ -38,9 +38,7 @@ function Hero() {
           </h1>
 
           <p>
-            Panadería artesanal marplatense y una
-            nueva propuesta de pastas frescas
-            elaboradas diariamente.
+            Productos artesanales elaborados cada día para acompañar cada uno de tus momentos.
           </p>
 
           <div className="hero-actions">
