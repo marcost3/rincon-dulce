@@ -2,7 +2,8 @@ import { useMemo } from "react";
 
 import {
   Navigation,
-  Search
+  Search,
+  MapPin
 } from "lucide-react";
 
 import { motion } from "framer-motion";
@@ -47,6 +48,16 @@ function calculateDistance(
   return earthRadius * c;
 }
 
+function formatDistance(distance) {
+  if (distance < 1) {
+    return `${Math.round(distance * 1000)} m`;
+  }
+
+  return `${distance
+    .toFixed(1)
+    .replace(".", ",")} km`;
+}
+
 function Branches() {
   const {
     location,
@@ -57,45 +68,57 @@ function Branches() {
 
   const sortedBranches = useMemo(() => {
     if (!location) {
-      return branches;
+      return branches.map((branch) => ({
+        ...branch,
+        distance: null
+      }));
     }
 
-    return [...branches].sort(
-      (a, b) => {
-
+    return branches
+      .map((branch) => {
         if (
-          !a.coordinates.lat ||
-          !a.coordinates.lng
+          !branch.coordinates?.lat ||
+          !branch.coordinates?.lng
+        ) {
+          return {
+            ...branch,
+            distance: null
+          };
+        }
+
+        const distance =
+          calculateDistance(
+            location.latitude,
+            location.longitude,
+            branch.coordinates.lat,
+            branch.coordinates.lng
+          );
+
+        return {
+          ...branch,
+          distance
+        };
+      })
+      .sort((a, b) => {
+        // Las sucursales que no tienen
+        // coordenadas quedan al final.
+        if (
+          a.distance === null &&
+          b.distance === null
         ) {
           return 0;
         }
 
-        if (
-          !b.coordinates.lat ||
-          !b.coordinates.lng
-        ) {
-          return 0;
+        if (a.distance === null) {
+          return 1;
         }
 
-        const distanceA =
-          calculateDistance(
-            location.latitude,
-            location.longitude,
-            a.coordinates.lat,
-            a.coordinates.lng
-          );
+        if (b.distance === null) {
+          return -1;
+        }
 
-        const distanceB =
-          calculateDistance(
-            location.latitude,
-            location.longitude,
-            b.coordinates.lat,
-            b.coordinates.lng
-          );
-
-        return distanceA - distanceB;
-      }
-    );
+        return a.distance - b.distance;
+      });
   }, [location]);
 
   return (
@@ -115,7 +138,7 @@ function Branches() {
             <h2>
               Estamos cerca
               <br />
-              tuyo.
+              de vos.
             </h2>
           </div>
 
@@ -125,7 +148,11 @@ function Branches() {
             disabled={loading}
           >
             {loading ? (
-              "Buscando..."
+              <>
+                <Navigation size={18} />
+
+                Buscando ubicación...
+              </>
             ) : (
               <>
                 <Navigation size={18} />
@@ -151,8 +178,8 @@ function Branches() {
           >
             <Navigation size={16} />
 
-            Sucursales ordenadas según
-            tu ubicación.
+            Sucursales ordenadas de la más
+            cercana a la más lejana.
           </motion.div>
         )}
 
@@ -188,6 +215,13 @@ function Branches() {
               >
                 <BranchCard
                   branch={branch}
+                  distance={
+                    branch.distance !== null
+                      ? formatDistance(
+                          branch.distance
+                        )
+                      : null
+                  }
                 />
               </motion.div>
             )

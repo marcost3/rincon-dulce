@@ -13,7 +13,10 @@ import {
   ExternalLink
 } from "lucide-react";
 
-function BranchCard({ branch }) {
+function BranchCard({
+  branch,
+  distance
+}) {
   const [menuOpen, setMenuOpen] =
     useState(false);
 
@@ -51,6 +54,16 @@ function BranchCard({ branch }) {
           </p>
 
         </div>
+
+        {distance && (
+          <div className="branch-distance">
+            <MapPin size={16} />
+
+            <strong>
+              {distance}
+            </strong>
+          </div>
+        )}
 
         <button
           className={`branch-toggle ${

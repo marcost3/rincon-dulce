@@ -10,8 +10,8 @@ export const branches = [
     mapsUrl: "https://maps.app.goo.gl/KwtjaZkYYxnDd8WG8",
 
     coordinates: {
-      lat: null,
-      lng: null
+      lat: -38.002361183604556,
+      lng: -57.54796446147792
     },
 
     products: [
@@ -31,8 +31,8 @@ export const branches = [
     mapsUrl: "https://maps.app.goo.gl/pAXg6iQvYK5x4i7A8",
 
     coordinates: {
-      lat: null,
-      lng: null
+      lat: -37.96474741318433,
+      lng: -57.54624784785587
     },
 
     products: [
@@ -52,8 +52,8 @@ export const branches = [
     mapsUrl: "https://maps.app.goo.gl/eQuDLr7UR4tVmMhh7",
 
     coordinates: {
-      lat: null,
-      lng: null
+      lat: -37.95202472643967,
+      lng: -57.56890714766698
     },
 
     products: [
@@ -73,8 +73,8 @@ export const branches = [
     mapsUrl: "https://maps.app.goo.gl/rSvWs2aJpFcnrr9t5",
 
     coordinates: {
-      lat: null,
-      lng: null
+      lat: -37.992080197388695,
+      lng: -57.558950788659075
     },
 
     products: [
@@ -94,8 +94,8 @@ export const branches = [
     mapsUrl: "https://maps.app.goo.gl/a4t5X3KiUzrKzHgz6",
 
     coordinates: {
-      lat: null,
-      lng: null
+      lat: -38.00154957915874,
+      lng: -57.561010727365186
     },
 
     products: [
@@ -115,8 +115,8 @@ export const branches = [
     mapsUrl: "https://maps.app.goo.gl/HU4DHRtCfXggwssL6",
 
     coordinates: {
-      lat: null,
-      lng: null
+      lat: -37.982338986347365,
+      lng: -57.570967086373095
     },
 
     products: [
@@ -136,8 +136,8 @@ export const branches = [
     mapsUrl: "https://maps.app.goo.gl/1BdyAQ5qALYj4gRo6",
 
     coordinates: {
-      lat: null,
-      lng: null
+      lat: -37.98775092965294,
+      lng: -57.56650389558656
     },
 
     products: [
@@ -157,8 +157,8 @@ export const branches = [
     mapsUrl: "https://maps.app.goo.gl/yKW3AbBGB1rMUzct6",
 
     coordinates: {
-      lat: null,
-      lng: null
+      lat: -37.96501808440698,
+      lng: -57.60049284530322
     },
 
     products: [
@@ -178,8 +178,8 @@ export const branches = [
     mapsUrl: "https://maps.app.goo.gl/5wszubFgvjgfgEbA8",
 
     coordinates: {
-      lat: null,
-      lng: null
+      lat: -37.98351141054991,
+      lng: -57.58494212648723
     },
 
     products: [
