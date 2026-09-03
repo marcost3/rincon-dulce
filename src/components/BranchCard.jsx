@@ -1,10 +1,5 @@
 import { useState } from "react";
-
-import {
-  motion,
-  AnimatePresence
-} from "framer-motion";
-
+import { motion, AnimatePresence } from "framer-motion";
 import {
   MapPin,
   Phone,
@@ -13,24 +8,14 @@ import {
   ExternalLink
 } from "lucide-react";
 
-function BranchCard({
-  branch,
-  distance
-}) {
-  const [menuOpen, setMenuOpen] =
-    useState(false);
+function BranchCard({ branch, distance }) {
+  const [menuOpen, setMenuOpen] = useState(false);
 
-  const whatsappNumber =
-    branch.whatsapp.replace(/\D/g, "");
-
-  const phoneNumber =
-    branch.phone.replace(/\D/g, "");
+  const whatsappNumber = branch.whatsapp.replace(/\D/g, "");
+  const phoneNumber = branch.phone.replace(/\D/g, "");
 
   return (
-    <motion.article
-      className="branch-card"
-      layout
-    >
+    <motion.article className="branch-card" layout>
       <div className="branch-main">
 
         <div className="branch-number">
@@ -38,46 +23,40 @@ function BranchCard({
         </div>
 
         <div className="branch-info">
-
           <span className="branch-label">
             RINCÓN DULCE
           </span>
 
-          <h3>
-            {branch.name}
-          </h3>
+          <h3>{branch.name}</h3>
 
           <p>
             <MapPin size={16} />
-
             {branch.address}
           </p>
-
         </div>
 
-        {distance && (
-          <div className="branch-distance">
-            <MapPin size={16} />
+        <div className="branch-right">
+          {distance && (
+            <div className="branch-distance">
+              <MapPin size={15} />
 
-            <strong>
-              {distance}
-            </strong>
-          </div>
-        )}
+              <strong>{distance}</strong>
+            </div>
+          )}
 
-        <button
-          className={`branch-toggle ${
-            menuOpen ? "active" : ""
-          }`}
-          onClick={() =>
-            setMenuOpen(!menuOpen)
-          }
-          aria-label="Ver productos"
-          aria-expanded={menuOpen}
-        >
-          <ChevronDown size={22} />
-        </button>
-
+          <button
+            className={`branch-toggle ${menuOpen ? "active" : ""}`}
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label={
+              menuOpen
+                ? "Ocultar productos"
+                : "Ver productos"
+            }
+            aria-expanded={menuOpen}
+          >
+            <ChevronDown size={22} />
+          </button>
+        </div>
       </div>
 
       <div className="branch-actions">
@@ -142,6 +121,10 @@ function BranchCard({
               height: 0,
               opacity: 0
             }}
+            transition={{
+              duration: 0.3,
+              ease: "easeInOut"
+            }}
           >
             <div className="branch-menu-inner">
 
@@ -149,7 +132,8 @@ function BranchCard({
                 DISPONIBLE EN ESTA SUCURSAL
               </span>
 
-              {branch.products.length > 0 ? (
+              {branch.products &&
+              branch.products.length > 0 ? (
                 <ul>
                   {branch.products.map(
                     (product, index) => (
@@ -170,7 +154,6 @@ function BranchCard({
           </motion.div>
         )}
       </AnimatePresence>
-
     </motion.article>
   );
 }
