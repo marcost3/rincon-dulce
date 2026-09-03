@@ -836,34 +836,32 @@ h2 {
   color: var(--text-light);
 }
 
+.branch-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
 .branch-distance {
   display: flex;
-
   align-items: center;
-
   justify-content: center;
-
-  gap: 7px;
-
-  min-width: 85px;
-
-  padding: 9px 13px;
-
+  gap: 6px;
+  padding: 8px 11px;
   border-radius: 100px;
-
   background: var(--olive-light);
-
   color: var(--black);
-
   font-size: 12px;
-
   white-space: nowrap;
-
+  flex-shrink: 0;
   animation: distanceAppear 0.4s ease;
 }
 
 .branch-distance svg {
   color: var(--olive-dark);
+  flex-shrink: 0;
 }
 
 .branch-distance strong {
@@ -1383,29 +1381,25 @@ h2 {
     height: 300px;
   }
 
-.branch-main {
-  grid-template-columns:
-    40px
-    1fr
-    auto
-    40px;
+  .branch-main {
+    grid-template-columns: 40px minmax(0, 1fr) auto;
+    gap: 10px;
+  }
 
-  gap: 10px;
-}
+  .branch-right {
+    gap: 7px;
+  }
 
-.branch-distance {
-  min-width: auto;
+  .branch-distance {
+    padding: 7px 9px;
+    font-size: 11px;
+  }
 
-  padding: 7px 9px;
+  .branch-distance svg {
+    width: 14px;
+    height: 14px;
+  }
 
-  font-size: 11px;
-}
-
-.branch-distance svg {
-  width: 14px;
-
-  height: 14px;
-}
 
   .branch-number {
     font-size: 16px;
@@ -1457,6 +1451,10 @@ h2 {
 }
 
 @media (max-width: 450px) {
+
+  .branch-distance strong {
+    font-size: 10px;
+  }
 
   .branch-action {
     flex: 1;
