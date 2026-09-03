@@ -1,7 +1,7 @@
 import panImg from '../assets/images/pan.jpg';
 import pastaImg from '../assets/images/pasta.jpg';
 import pasta2Img from '../assets/images/pasta2.jpg';
-import masitas from '../assets/images/masitas.jpg';
+import masitas from '../assets/images/masita.jpg';
 
 export const products = [
   {
